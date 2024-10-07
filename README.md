@@ -1,53 +1,33 @@
-# Übungsaufgabe: Textbasiertes Abenteuer "Die verlorene Schatzsuche"
+# Die verlorene Schatzsuche
 
-## Aufgabenstellung
+Die verlorene Schatzsuche ist ein textbasiertes Abenteuerspiel, in dem du durch verschiedene Räume gehst, Rätsel löst und am Ende einen Schatz findest. Ich erkläre dir hier, wie das Spiel funktioniert und was es alles kann.
 
-Entwickle ein textbasiertes Abenteuerspiel namens **"Die verlorene Schatzsuche"**, bei dem der Spieler durch verschiedene Räume navigiert, Rätsel löst und letztendlich den Schatz findet. Das Ziel dieser Übung ist es, die Vorteile von Funktionen und das Auslagern von Code in externe Dateien kennenzulernen.
+## Funktionen
+Es gibt verschiedene Funktionen im Spiel:
 
-## Anforderungen
+- **`greeting()`**: Begrüßt dich und erklärt, wie das Spiel läuft.
+- **`enter_room(room)`**: Beschreibt, wie der Raum aussieht, in dem du dich befindest, und welche Aktionen möglich sind.
+- **`solve_riddle(riddle)`**: Zeigt dir ein Rätsel und prüft, ob deine Antwort richtig ist.
+- **`end_game()`**: Beendet das Spiel und verabschiedet sich.
 
-1. ### Funktionen verwenden
-   - **Erstelle Funktionen** für die folgenden Aufgaben:
-     - `greeting()`: Begrüßt den Spieler und erklärt die Spielregeln.
-     - `enter_room(room)`: Beschreibt den aktuellen Raum und die verfügbaren Aktionen.
-     - `solve_riddle(riddle)`: Präsentiert ein Rätsel und überprüft die Antwort des Spielers.
-     - `end_game()`: Verabschiedet sich vom Spieler und beendet das Spiel.
+Um den Code ordentlich zu halten, habe ich zwei Funktionen in eine separate Datei namens **`game_utils.py`** ausgelagert.
 
-2. ### Code auslagern
-   - **Lagere die Funktionen** `solve_riddle(riddle)` und `end_game()` in eine externe Python-Datei namens `game_utils.py` aus.
-   - **Importiere diese Funktionen** in dein Hauptprogramm.
+## Spielstruktur
+Das Spiel hat mehrere Räume:
 
-3. ### Spielstruktur
-   - Das Spiel besteht aus **mindestens drei verschiedenen Räumen**.
-   - Jeder Raum enthält ein **einzigartiges Rätsel**, das gelöst werden muss, um weiterzukommen.
-   - Der Spieler kann durch Eingabe von Befehlen wie `"norden"`, `"süden"`, `"osten"`, `"westen"` navigieren.
-   - Wenn der Spieler den Schatz gefunden hat, soll das Spiel eine entsprechende Nachricht ausgeben und enden.
+1. **Startbereich**: Hier beginnst du und kannst in zwei Richtungen gehen.
+2. **Raum 1**: Dieser Raum enthält ein Rätsel, das du lösen musst, um weiterzukommen.
+3. **Raum 2**: Ein weiterer Raum mit einem anderen Rätsel, das anders ist als im ersten Raum.
+4. **Raum 3**: Der letzte Raum vor dem Schatz mit dem letzten Rätsel.
+5. **Schatz**: Wenn du alle Rätsel gelöst hast, findest du hier den Schatz.
 
-4. ### Interaktive Elemente
-   - Implementiere eine **einfache Eingabeaufforderung**, die die Aktionen des Spielers entgegennimmt.
-   - Verarbeite die Eingaben und führe die entsprechenden Funktionen aus.
+## Navigation
+Du kannst dich mit Befehlen wie **„norden“, „süden“, „osten“** und **„westen“** durch die Räume bewegen.
 
-## Optionale Erweiterungen
+## Erweiterungen (optional)
+- **Inventarsystem**: Füge ein Inventar hinzu, damit du Gegenstände sammeln und verwenden kannst.
+- **Punktesystem**: Implementiere ein Punktesystem, um deine Leistung zu bewerten.
+- **Mehr Räume und Rätsel**: Erweitere das Spiel um weitere Räume und Rätsel, um es noch spannender zu machen.
 
-- Füge ein **Inventarsystem** hinzu, in dem der Spieler Gegenstände sammeln und verwenden kann.
-- Implementiere ein **einfaches Punktesystem**, das die Leistung des Spielers bewertet.
-- Erstelle **zusätzliche Räume und Rätsel**, um das Spiel umfangreicher zu gestalten.
-
-## Hinweise
-
-- Achte auf eine **saubere und übersichtliche Code-Struktur**.
-- Verwende **aussagekräftige Funktions- und Variablennamen** (auf Englisch).
-- **Kommentiere deinen Code**, um die Funktionsweise zu erklären.
-- **Teste dein Spiel** ausgiebig, um sicherzustellen, dass alle Funktionen korrekt arbeiten.
-
-## Ziel der Übung
-
-Durch diese Aufgabe lernst du:
-
-- Wie **Funktionen** dazu beitragen, deinen Code übersichtlicher und wiederverwendbar zu machen.
-- Wie du Code in **externe Dateien auslagern** und in deinem Hauptprogramm verwenden kannst.
-- Wie du ein **interaktives Programm** entwickelst, das Benutzereingaben verarbeitet.
-
----
-
-**Viel Spaß beim Programmieren und auf zur Schatzsuche!**
+## Fazit
+Das Spiel zeigt dir, wie du Funktionen nutzt und wie du ein interaktives Programm entwickeln kannst. Es ist eine gute Übung, um die Strukturierung von Code und die Auslagerung in externe Dateien zu lernen.
